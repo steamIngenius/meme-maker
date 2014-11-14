@@ -15,7 +15,7 @@
 
 		ctx.fillStyle = "black";
 		ctx.strokeStyle = "gray";
-		
+
 		ctx.beginPath();
 		ctx.moveTo(50, 50);
 		ctx.lineTo(150, 50);
@@ -30,6 +30,14 @@
 		ctx.lineTo(125, 75);
 		ctx.lineTo(125, 125);
 		ctx.fill();
+
+		ctx.fillStyle = "white";
+		ctx.strokeStyle = "black";
+		ctx.textAlign = "center";
+		ctx.font = "bold 36px Impact";
+		ctx.lineWidth = 2;
+		ctx.fillText("canvas memes!".toUpperCase(), c.width / 2, 40);
+		ctx.strokeText("canvas memes!".toUpperCase(), c.width / 2, 40);
 	</script>
 </body>
 </html>
