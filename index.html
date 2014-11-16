@@ -3,7 +3,7 @@
 <html>
 <head>
 	<link href="css/styles.css" rel="stylesheet" type="text/css" />
-	
+
 	<title>Simple Meme Generator</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -11,7 +11,20 @@
 	<meta name="apple-mobile-web-capable" content="yes">
 </head>
 <body>
-	<canvas id="c" width="500" height="500"></canvas>
+	<div>
+		<input type="file" id="file" />
+	</div>
+
+	<div id="image-container">
+		<canvas height="500" width="500"></canvas>
+		<div>
+			<span>Top Line:</span><br/>
+			<input id="topLineText" type="text"><br/>
+			<span>Bottom Line:</span><br/>
+			<input id="bottomLineText" type="text"><br/>
+			<button id="saveButton">Save</button>
+		</div>
+	</div>
 
 	<script type="text/javascript" src="js/memes.js"></script>
 </body>
