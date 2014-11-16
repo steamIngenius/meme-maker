@@ -24,7 +24,7 @@ function redrawMeme(image, topLine, bottomLine) {
 
 	// draw image
 	if (image != null) {
-		ctx.drawImage(image, 0, 0);
+		ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 	}
 
 	// set up text
