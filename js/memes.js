@@ -1,3 +1,21 @@
+function convertToGrayscale() {
+	var canvas = document.querySelector('canvas');
+	var ctx = canvas.getContext("2d");
+
+	var image = ctx.getImageData(0, 0, canvas.width, canvas.height);
+	for (var i = 0; i < image.data.length; i = i + 4) { // skip through 4 values at a time
+		// compute average
+		var avg = (image.data[i] + image.data[i + 1] + image.data[i + 2] ) / 3;
+
+		// assign it to our data
+	    image.data[i] = avg;
+	    image.data[i + 1] = avg;
+	    image.data[i + 2] = avg;
+	}
+
+	ctx.putImageData(image, 0, 0);
+}
+
 function textChangeListener(evt) {
 	// grab the id and value of what changed
 	var id = evt.target.id;
@@ -84,3 +102,4 @@ input2.oninput = textChangeListener;
 
 document.getElementById('file').addEventListener('change', handleFileSelect, false);
 document.getElementById('saveButton').addEventListener('click', saveFile, false);
+document.getElementById('convertToGrayscale').addEventListener('click', convertToGrayscale, false);
